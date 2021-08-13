@@ -80,3 +80,13 @@
 (use-package magit
   :bind ("C-M-;" . magit-status)
   :commands (magit-status magit-get-current-branch))
+
+;; Add support for dragging stuff
+(use-package drag-stuff
+  :ensure t
+  :init (drag-stuff-global-mode t)
+  :bind (
+	 ("M-<up>" . drag-stuff-up)
+	 ("M-<down>" . drag-stuff-down)
+  )
+)
